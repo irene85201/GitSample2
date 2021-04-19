@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$(window).resize(function() {
+			var txt = "";
+			txt += "Document width/height: " + $(document).width();
+			txt += " X " + $(document).height()  + "<br>";
+			txt += "Window width/height: " + $(window).width();
+			txt += " X " + $(window).height();
+			$("#div1").html(txt);
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="div1"
+		style="height: 200px; width: 350px; padding: 10px; margin: 15px;
+			border: 10px solid blue; background-color: lightblue;">
+	</div>
+</body>
+</html>
+

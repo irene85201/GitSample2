@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+			$("[href]").hide();
+		});
+		$("#btn2").click(function() {
+			$("a[target='_blank']").hide();
+		});
+		$("#btn3").click(function() {
+			$("a[target!='_blank']").hide();
+		});
+		$("#btn4").click(function() {
+			$("input[value$='chen']").hide();
+		});
+		$("#btn5").click(function() {
+			$("input[value|='chen']").hide();
+		});
+		$("#btn6").click(function() {
+			$("input[value^='chen']").hide();
+		});
+		$("#btn7").click(function() {
+			$("input[value~='chen']").hide();
+		});
+		$("#btn8").click(function() {
+			$("input[value*='chen']").hide();
+		});
+	});
+</script>
+</head>
+
+<body>
+	<button id="btn1">Hide with attr name 'href'</button>
+	<button id="btn2">Hide with attr value equally</button>
+	<button id="btn3">Hide with attr value unequally</button>
+	<button id="btn4">$=</button>
+	<button id="btn5">|=</button>
+	<button id="btn6">^=</button>
+	<button id="btn7">~=</button>
+	<button id="btn8">*=</button>
+	
+	<h2>This is a heading</h2>
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	<a href="http://www.w3schools.com/html/" target="_blank">HTML Tutorial</a><p>
+	<a href="http://www.w3schools.com/css/">CSS Tutorial</a><p>
+	
+	input1:<input type="text" value="chen yi jen"><br>
+	input2:<input type="text" value="chen"><br>
+	input3:<input type="text" value="chen-yi-jen"><br>
+	input4:<input type="text" value="chen yi jen"><br>
+	input5:<input type="text" value="chenyijen"><br>
+</body>
+</html>
